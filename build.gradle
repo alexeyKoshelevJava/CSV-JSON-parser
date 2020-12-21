@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+
+}
+
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_15
+targetCompatibility = JavaVersion.VERSION_15
+def junitVersion = '5.7.0'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+dependencies {
+    compile 'com.opencsv:opencsv:5.1'
+}
+dependencies {
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+}
+dependencies {
+    compile 'com.google.code.gson:gson:2.8.2'
+}
+
+jar{
+    manifest{
+        attributes 'Main-class':'ru.netology.App'
+    }
+}
