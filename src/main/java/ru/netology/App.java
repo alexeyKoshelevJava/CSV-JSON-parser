@@ -49,7 +49,7 @@ public class App {
         List<Employee> listEmployee = parseXML("new_staff.xml");
         System.out.println("список сотрудников из xml"+listEmployee);
         String new_json = listToJson(listEmployee);
-        writeString(json, "new_json.json");
+        writeString(new_json, "new_json.json");
 
 
 
